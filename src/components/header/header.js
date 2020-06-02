@@ -1,12 +1,12 @@
 import React from "react"
-import { Navbar, Nav, NavDropdown } from "react-bootstrap"
+import { Navbar, Nav} from "react-bootstrap"
 import { Link } from "gatsby"
 import './header.css'
 const Header = () => {
   return (
     <>
       <Navbar className="nav" collapseOnSelect expand="lg" variant="dark">
-        <Navbar.Brand href="/">Clothes</Navbar.Brand>
+        <Navbar.Brand href="/">Roperito</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
