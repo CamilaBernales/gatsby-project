@@ -27,6 +27,12 @@ const Text = styled.div`
       font-size: 5.8rem;
     }
   }
+  p {
+    font-size: 2rem;
+    @media (min-width: 992px) {
+      font-size: 2.6rem;
+    }
+  }
 `
 const ImagPrincipal = () => {
   const { image } = useStaticQuery(graphql`

@@ -1,11 +1,12 @@
 import React from "react"
-import Layout from '../components/Layout';
-
-import ImagPrincipal from '../components/imagPrincipal'
+import Layout from "../components/Layout"
+import ImagPrincipal from "../components/imagPrincipal"
+import Inicio from "../components/Inicio"
 const IndexPage = () => (
-    <Layout>
-    <ImagPrincipal/>
-    </Layout>
+  <Layout>
+    <ImagPrincipal />
+    <Inicio />
+  </Layout>
 )
 
 export default IndexPage
