@@ -19,8 +19,8 @@ const TextoInicio = styled.div`
   }
 `
 
-const Inicio = () => {
-  const info = useStaticQuery(graphql`
+const InicioPage = () => {
+  const Info = useStaticQuery(graphql`
     query {
       allDatoCmsPagina(filter: { slug: { eq: "inicio" } }) {
         nodes {
@@ -35,15 +35,16 @@ const Inicio = () => {
       }
     }
   `)
-  //   console.log(info.allDatoCmsPagina.nodes[0])
-  const { titulo, contenido, imagen } = info.allDatoCmsPagina.nodes[0]
+  console.log(Info)
+  const { titulo, contenido, imagen } = Info.allDatoCmsPagina.nodes[0]
+
   return (
     <>
       <h2
         css={css`
-          text-align: center;
-          font-size: 2rem;
           margin-top: 2rem;
+          text-align: center;
+          font-ize: 2rem;
         `}
       >
         {titulo}
@@ -55,5 +56,4 @@ const Inicio = () => {
     </>
   )
 }
-
-export default Inicio
+export default InicioPage
