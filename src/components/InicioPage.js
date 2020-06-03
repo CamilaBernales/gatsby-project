@@ -35,7 +35,6 @@ const InicioPage = () => {
       }
     }
   `)
-  console.log(Info)
   const { titulo, contenido, imagen } = Info.allDatoCmsPagina.nodes[0]
 
   return (
