@@ -16,34 +16,45 @@ const Boton = styled(Link)`
   text-align: center;
 `
 const LookPrev = ({ look }) => {
-  const {  contenido, imagen, titulo, slug } = look
+  const { contenido, imagen, titulo, slug } = look
 
   return (
     <div
       css={css`
         margin-bottom: 5rem;
+        flex-direction: column;
+        justify-content: space-between;
       `}
     >
-      {imagen.map((img, i) => (
-        <img
-          key={i}
-          css={css`
-            border: 0.5px solid #dfd3d3;
-            max-width: 400px;
-            padding: 2rem;
-            width: 95%;
-            @media (max-width: 768px) {
-              padding-top: 1rem;
-              margin: 0 auto;
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              column-gap: 5rem;
-            }
-          `}
-          src={img.fluid.srcSet}
-        />
-      ))}
-
+      <div
+        css={css`
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        `}
+      >
+        {imagen.map((img, i) => (
+          <img
+            key={i}
+            css={css`
+              border: 0.5px solid #dfd3d3;
+              max-width: 400px;
+              padding: 2rem 2rem;
+              width: 95%;
+              @media (max-width: 768px) {
+                padding-top: 1rem;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 5rem;
+              }
+            `}
+            src={img.fluid.srcSet}
+          />
+        ))}
+      </div>
       <h5
         css={css`
           margin: 2rem;

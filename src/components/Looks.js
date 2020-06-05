@@ -53,6 +53,15 @@ const Looks = ({
             {contenido}
           </p>
         </div>
+        <div
+        css={css`
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+        `}
+      >
         {imagen.map(img => (
           <img
             css={css`
@@ -71,6 +80,7 @@ const Looks = ({
             src={img.fluid.srcSet}
           />
         ))}
+        </div>
       </div>
     </Layout>
   )
